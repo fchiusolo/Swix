@@ -13,8 +13,21 @@ private let segueToNewTodoIdentifier = "newTodoSegue"
 
 class TodosTableViewController: UITableViewController {
 
-	var todos: [Todo] = []
+	private var todos: [Todo] = []
 
+	private func complete(todoAt indexPath: IndexPath) {
+		let removedTodo = todos.remove(at: indexPath.row)
+		let editedTodo = Todo(title: removedTodo.title,
+							  description: removedTodo.description,
+							  completed: !removedTodo.completed)
+		todos.insert(editedTodo, at: indexPath.row)
+		tableView.reloadData()
+	}
+
+	private func delete(todoAt indexPath: IndexPath) {
+		todos.remove(at: indexPath.row)
+		tableView.reloadData()
+	}
 }
 
 // MARK: - Lifecycle
@@ -52,6 +65,32 @@ extension TodosTableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueCell(withStyle: .subtitle, usingIdentifier: cellReuseIdentifier)
 		return TodoCellFactory.fill(cell: cell, withTodo: todos[indexPath.row])
+	}
+
+}
+
+// MARK: - Table View
+extension TodosTableViewController {
+
+	override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let action = UIContextualAction(style: .normal,
+										title: todos[indexPath.row].completed ? "Not Done" : "Done",
+										handler: { _, _, completion in
+											self.complete(todoAt: indexPath)
+											completion(true)
+		})
+		action.backgroundColor = .green
+		return UISwipeActionsConfiguration(actions: [action])
+	}
+
+	override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let action = UIContextualAction(style: .destructive,
+										title: "Delete",
+										handler: { _, _, completion in
+											self.delete(todoAt: indexPath)
+											completion(true)
+		})
+		return UISwipeActionsConfiguration(actions: [action])
 	}
 
 }
