@@ -60,14 +60,12 @@ extension TodosTableViewController {
 extension TodosTableViewController {
 
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		let destination = segue.destination
-		switch destination {
-		case is NewTodoViewController:
-			let newTodoViewController = destination as! NewTodoViewController
-			newTodoViewController.delegate = self
-		default:
-			return
+		guard
+			let navigationController = segue.destination as? UINavigationController,
+			let newTodoViewController = navigationController.viewControllers.first as? NewTodoViewController else {
+				return
 		}
+		newTodoViewController.delegate = self
 	}
 
 }

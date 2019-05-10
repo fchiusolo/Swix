@@ -9,12 +9,15 @@
 import UIKit
 
 class TodoCellFactory {
-	
+
 	static func fill(cell: UITableViewCell, withTodo todo: Todo) -> UITableViewCell {
+		if todo.completed {
+			cell.accessoryType = .checkmark
+		}
+
 		cell.textLabel?.text = todo.title
 		cell.detailTextLabel?.text = todo.description
-		cell.accessoryType = todo.completed ? .checkmark : .disclosureIndicator
 		return cell
 	}
-	
+
 }
