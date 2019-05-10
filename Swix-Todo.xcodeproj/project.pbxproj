@@ -77,12 +77,8 @@
 		406B00A12286021400B93924 /* Swix-Todo */ = {
 			isa = PBXGroup;
 			children = (
-				406B00A22286021400B93924 /* AppDelegate.swift */,
-				406B00A42286021400B93924 /* ViewController.swift */,
-				406B00A62286021400B93924 /* Main.storyboard */,
-				406B00A92286021500B93924 /* Assets.xcassets */,
-				406B00AB2286021500B93924 /* LaunchScreen.storyboard */,
-				406B00AE2286021500B93924 /* Info.plist */,
+				406B00C42286024200B93924 /* Resources */,
+				406B00C32286023800B93924 /* Sources */,
 			);
 			path = "Swix-Todo";
 			sourceTree = "<group>";
@@ -94,6 +90,34 @@
 				406B00B92286021500B93924 /* Info.plist */,
 			);
 			path = "Swix-TodoTests";
+			sourceTree = "<group>";
+		};
+		406B00C22286022300B93924 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				406B00AB2286021500B93924 /* LaunchScreen.storyboard */,
+				406B00A62286021400B93924 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		406B00C32286023800B93924 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				406B00A22286021400B93924 /* AppDelegate.swift */,
+				406B00A42286021400B93924 /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		406B00C42286024200B93924 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				406B00C22286022300B93924 /* Storyboards */,
+				406B00A92286021500B93924 /* Assets.xcassets */,
+				406B00AE2286021500B93924 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MPX898GZF;
-				INFOPLIST_FILE = "Swix-Todo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Swix-Todo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4MPX898GZF;
-				INFOPLIST_FILE = "Swix-Todo/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Swix-Todo/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
