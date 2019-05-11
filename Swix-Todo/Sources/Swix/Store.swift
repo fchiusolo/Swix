@@ -10,7 +10,7 @@ import Foundation
 
 class Store<State, Action> {
 
-	typealias Subscriber = (Store) -> Void
+	typealias Subscriber = (State) -> Void
 	typealias Reducer = (State, Action) -> State
 
 	private(set) var state: State
@@ -29,6 +29,7 @@ class Store<State, Action> {
 
 	func handle(action: Action) {
 		state = reduce(state, action)
+		subscribers.forEach { $0(state) }
 	}
 
 }

@@ -10,6 +10,14 @@ import Foundation
 
 struct TodoState {
 
-	let todos: [Todo] = []
+	let todos: [Todo]
+
+}
+
+extension TodoState {
+
+	static func initial() -> TodoState {
+		return TodoState(todos: [])
+	}
 
 }

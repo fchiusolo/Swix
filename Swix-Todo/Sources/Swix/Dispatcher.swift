@@ -8,13 +8,18 @@
 
 import Foundation
 
-class Dispatcher<Action> {
+class Dispatcher<State, Action> {
 
 	private var history = [Action]()
-	private let store = Store<TodoState, TodoAction>(state: TodoState(), reducers: [])
+	private let store: Store<State, Action>
+
+	init(store: Store<State, Action>) {
+		self.store = store
+	}
 
 	func dispatch(action: Action) {
 		history.append(action)
+		store.handle(action: action)
 	}
 
 }
