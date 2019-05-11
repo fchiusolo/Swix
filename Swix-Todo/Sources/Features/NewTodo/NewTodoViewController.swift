@@ -9,12 +9,10 @@
 import UIKit
 
 class NewTodoViewController: UIViewController {
-
 	@IBOutlet weak var titleField: UITextField!
 	@IBOutlet weak var descriptionField: UITextField!
 
 	weak var delegate: NewTodoDelegate?
-
 }
 
 // MARK: - Lifecycle

@@ -15,19 +15,6 @@ class TodosTableViewController: UITableViewController {
 
 	private var todos: [Todo] = []
 
-	private func complete(todoAt indexPath: IndexPath) {
-		let removedTodo = todos.remove(at: indexPath.row)
-		let editedTodo = Todo(title: removedTodo.title,
-							  description: removedTodo.description,
-							  completed: !removedTodo.completed)
-		todos.insert(editedTodo, at: indexPath.row)
-		tableView.reloadData()
-	}
-
-	private func delete(todoAt indexPath: IndexPath) {
-		todos.remove(at: indexPath.row)
-		tableView.reloadData()
-	}
 }
 
 // MARK: - Lifecycle
@@ -47,6 +34,20 @@ extension TodosTableViewController {
 
 	@objc func addTodo() {
 		performSegue(withIdentifier: segueToNewTodoIdentifier, sender: nil)
+	}
+
+	private func complete(todoAt indexPath: IndexPath) {
+		let removedTodo = todos.remove(at: indexPath.row)
+		let editedTodo = Todo(title: removedTodo.title,
+							  description: removedTodo.description,
+							  completed: !removedTodo.completed)
+		todos.insert(editedTodo, at: indexPath.row)
+		tableView.reloadData()
+	}
+
+	private func delete(todoAt indexPath: IndexPath) {
+		todos.remove(at: indexPath.row)
+		tableView.reloadData()
 	}
 
 }

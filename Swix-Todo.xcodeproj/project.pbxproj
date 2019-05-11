@@ -18,6 +18,10 @@
 		406B00D122860D1000B93924 /* NewTodoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00D022860D1000B93924 /* NewTodoDelegate.swift */; };
 		406B00D422860D6800B93924 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00D322860D6800B93924 /* Todo.swift */; };
 		406B00D6228614C800B93924 /* TodoCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00D5228614C800B93924 /* TodoCellFactory.swift */; };
+		40C5C91922874D8C008002EF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C91822874D8C008002EF /* Store.swift */; };
+		40C5C91B22874F45008002EF /* TodoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C91A22874F45008002EF /* TodoState.swift */; };
+		40C5C91F22875005008002EF /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C91E22875005008002EF /* Dispatcher.swift */; };
+		40C5C92322876680008002EF /* TodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C92222876680008002EF /* TodoAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		406B00D022860D1000B93924 /* NewTodoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoDelegate.swift; sourceTree = "<group>"; };
 		406B00D322860D6800B93924 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		406B00D5228614C800B93924 /* TodoCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCellFactory.swift; sourceTree = "<group>"; };
+		40C5C91822874D8C008002EF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		40C5C91A22874F45008002EF /* TodoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoState.swift; sourceTree = "<group>"; };
+		40C5C91E22875005008002EF /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
+		40C5C92222876680008002EF /* TodoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +123,12 @@
 			isa = PBXGroup;
 			children = (
 				406B00A22286021400B93924 /* AppDelegate.swift */,
+				40C5C92122876670008002EF /* Actions */,
 				406B00CB22860BA000B93924 /* Extensions */,
 				406B00CC22860BA700B93924 /* Features */,
 				406B00D222860D5E00B93924 /* Models */,
+				40C5C9202287665E008002EF /* State */,
+				40889AD122862C9C0078C903 /* Swix */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -181,6 +192,31 @@
 				406B00D322860D6800B93924 /* Todo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		40889AD122862C9C0078C903 /* Swix */ = {
+			isa = PBXGroup;
+			children = (
+				40C5C91822874D8C008002EF /* Store.swift */,
+				40C5C91E22875005008002EF /* Dispatcher.swift */,
+			);
+			path = Swix;
+			sourceTree = "<group>";
+		};
+		40C5C9202287665E008002EF /* State */ = {
+			isa = PBXGroup;
+			children = (
+				40C5C91A22874F45008002EF /* TodoState.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		40C5C92122876670008002EF /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				40C5C92222876680008002EF /* TodoAction.swift */,
+			);
+			path = Actions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,10 +321,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				406B00C92286090100B93924 /* CellDequeue.swift in Sources */,
+				40C5C91B22874F45008002EF /* TodoState.swift in Sources */,
 				406B00D422860D6800B93924 /* Todo.swift in Sources */,
 				406B00D6228614C800B93924 /* TodoCellFactory.swift in Sources */,
+				40C5C91922874D8C008002EF /* Store.swift in Sources */,
 				406B00D122860D1000B93924 /* NewTodoDelegate.swift in Sources */,
 				406B00CF22860CE200B93924 /* NewTodoViewController.swift in Sources */,
+				40C5C92322876680008002EF /* TodoAction.swift in Sources */,
+				40C5C91F22875005008002EF /* Dispatcher.swift in Sources */,
 				406B00A32286021400B93924 /* AppDelegate.swift in Sources */,
 				406B00C72286042F00B93924 /* TodosTableViewController.swift in Sources */,
 			);
