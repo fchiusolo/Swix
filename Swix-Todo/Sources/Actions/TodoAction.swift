@@ -12,4 +12,5 @@ enum TodoAction {
 	case addTodo(Todo)
 	case deleteTodo(Todo)
 	case completeTodo(Todo)
+	case changeRoute(Route)
 }

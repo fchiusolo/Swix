@@ -16,8 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var store: Store<TodoState, TodoAction>!
 	var dispatcher: Dispatcher<TodoState, TodoAction>!
 	let reducers = [
-		addTodo
+		addTodo,
+		changeRoute
 	]
+
+	var router: Router?
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		window = UIWindow(frame: UIScreen.main.bounds)
@@ -25,8 +28,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		store = Store<TodoState, TodoAction>(state: TodoState.initial(), reducers: reducers)
 		dispatcher = Dispatcher<TodoState, TodoAction>(store: store)
 
-		let todosViewController = TodosViewController(store: store, dispatcher: dispatcher)
-		let navigationController = UINavigationController(rootViewController: todosViewController)
+		let navigationController = UINavigationController()
+
+		router = TodoRouter(navigationController: navigationController,
+							store: store,
+							dispatcher: dispatcher)
+
+		router?.start()
 
 		window?.rootViewController = navigationController
 		window?.makeKeyAndVisible()

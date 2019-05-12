@@ -11,7 +11,9 @@ import Foundation
 func addTodo(_ state: TodoState, _ action: TodoAction) -> TodoState {
 	switch action {
 	case .addTodo(let newTodo):
-		return TodoState(todos: concat(todos: state.todos, with: newTodo))
+		let newTodos = concat(todos: state.todos, with: newTodo)
+		return TodoState(todos: newTodos,
+						 currentRoute: state.currentRoute)
 	default:
 		return state
 	}

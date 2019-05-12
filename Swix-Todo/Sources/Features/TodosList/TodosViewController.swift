@@ -19,10 +19,14 @@ class TodosViewController: UIViewController {
 
 	private let store: Store<TodoState, TodoAction>
 	private let dispatcher: Dispatcher<TodoState, TodoAction>
+	private let router: Router
 
-	init(store: Store<TodoState, TodoAction>, dispatcher: Dispatcher<TodoState, TodoAction>) {
+	init(store: Store<TodoState, TodoAction>,
+		 dispatcher: Dispatcher<TodoState, TodoAction>,
+		 router: Router) {
 		self.store = store
 		self.dispatcher = dispatcher
+		self.router = router
 		super.init(nibName: nil, bundle: nil)
 	}
 
@@ -62,9 +66,7 @@ extension TodosViewController {
 extension TodosViewController {
 
 	@objc func addTodo() {
-		let newTodo = Todo(title: "Title", description: "Description", completed: false)
-		dispatcher.dispatch(action: .addTodo(newTodo))
-//		performSegue(withIdentifier: segueToNewTodoIdentifier, sender: nil)
+		dispatcher.dispatch(action: .changeRoute(.newTodo))
 	}
 
 //	private func complete(todoAt indexPath: IndexPath) {

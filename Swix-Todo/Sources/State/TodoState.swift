@@ -11,13 +11,15 @@ import Foundation
 struct TodoState {
 
 	let todos: [Todo]
+	let currentRoute: Route
+
 
 }
 
 extension TodoState {
 
 	static func initial() -> TodoState {
-		return TodoState(todos: [])
+		return TodoState(todos: [], currentRoute: .todosList)
 	}
 
 }
