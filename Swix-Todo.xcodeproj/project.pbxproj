@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		406B00A32286021400B93924 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00A22286021400B93924 /* AppDelegate.swift */; };
-		406B00A82286021400B93924 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406B00A62286021400B93924 /* Main.storyboard */; };
 		406B00AA2286021500B93924 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 406B00A92286021500B93924 /* Assets.xcassets */; };
 		406B00AD2286021500B93924 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 406B00AB2286021500B93924 /* LaunchScreen.storyboard */; };
 		406B00B82286021500B93924 /* Swix_TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00B72286021500B93924 /* Swix_TodoTests.swift */; };
 		406B00C72286042F00B93924 /* TodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00C62286042F00B93924 /* TodosViewController.swift */; };
 		406B00C92286090100B93924 /* CellDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00C82286090100B93924 /* CellDequeue.swift */; };
 		406B00CF22860CE200B93924 /* NewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00CE22860CE200B93924 /* NewTodoViewController.swift */; };
-		406B00D122860D1000B93924 /* NewTodoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00D022860D1000B93924 /* NewTodoDelegate.swift */; };
 		406B00D422860D6800B93924 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00D322860D6800B93924 /* Todo.swift */; };
 		406B00D6228614C800B93924 /* TodoCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00D5228614C800B93924 /* TodoCellFactory.swift */; };
 		40A0EBF32288594200580E85 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0EBF22288594200580E85 /* Router.swift */; };
@@ -43,7 +41,6 @@
 /* Begin PBXFileReference section */
 		406B009F2286021400B93924 /* Swix-Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swix-Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		406B00A22286021400B93924 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		406B00A72286021400B93924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		406B00A92286021500B93924 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		406B00AC2286021500B93924 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		406B00AE2286021500B93924 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +50,6 @@
 		406B00C62286042F00B93924 /* TodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodosViewController.swift; sourceTree = "<group>"; };
 		406B00C82286090100B93924 /* CellDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDequeue.swift; sourceTree = "<group>"; };
 		406B00CE22860CE200B93924 /* NewTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoViewController.swift; sourceTree = "<group>"; };
-		406B00D022860D1000B93924 /* NewTodoDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoDelegate.swift; sourceTree = "<group>"; };
 		406B00D322860D6800B93924 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		406B00D5228614C800B93924 /* TodoCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCellFactory.swift; sourceTree = "<group>"; };
 		40A0EBF22288594200580E85 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -126,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				406B00AB2286021500B93924 /* LaunchScreen.storyboard */,
-				406B00A62286021400B93924 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -196,7 +191,6 @@
 			children = (
 				40C5C92A22878352008002EF /* NewTodoReducers.swift */,
 				406B00CE22860CE200B93924 /* NewTodoViewController.swift */,
-				406B00D022860D1000B93924 /* NewTodoDelegate.swift */,
 			);
 			path = NewTodo;
 			sourceTree = "<group>";
@@ -328,7 +322,6 @@
 			files = (
 				406B00AD2286021500B93924 /* LaunchScreen.storyboard in Resources */,
 				406B00AA2286021500B93924 /* Assets.xcassets in Resources */,
-				406B00A82286021400B93924 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +346,6 @@
 				40C5C92B22878352008002EF /* NewTodoReducers.swift in Sources */,
 				40C5C91922874D8C008002EF /* Store.swift in Sources */,
 				40A0EBF722885D7700580E85 /* RoutingReducers.swift in Sources */,
-				406B00D122860D1000B93924 /* NewTodoDelegate.swift in Sources */,
 				406B00CF22860CE200B93924 /* NewTodoViewController.swift in Sources */,
 				40CF6E42228A05A1000749CF /* TodosReducers.swift in Sources */,
 				40A0EBF922885F2300580E85 /* Routes.swift in Sources */,
@@ -385,14 +377,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		406B00A62286021400B93924 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				406B00A72286021400B93924 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		406B00AB2286021500B93924 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
