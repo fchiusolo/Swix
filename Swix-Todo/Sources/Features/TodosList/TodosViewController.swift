@@ -15,8 +15,6 @@ class TodosViewController: UIViewController {
 
 	var tableView: UITableView!
 
-	private var todos: [Todo] = []
-
 	private let store: Store<TodoState, TodoAction>
 	private let dispatcher: Dispatcher<TodoState, TodoAction>
 	private let router: Router
@@ -56,10 +54,11 @@ extension TodosViewController {
 
 // MARK: - Swix
 extension TodosViewController {
+
 	func onStateChange(_ state: TodoState) {
-		todos = state.todos
 		tableView.reloadData()
 	}
+
 }
 
 // MARK: - Actions
@@ -69,15 +68,6 @@ extension TodosViewController {
 		dispatcher.dispatch(action: .changeRoute(.newTodo))
 	}
 
-//	private func complete(todoAt indexPath: IndexPath) {
-//		let removedTodo = todos.remove(at: indexPath.row)
-//		let editedTodo = Todo(title: removedTodo.title,
-//							  description: removedTodo.description,
-//							  completed: !removedTodo.completed)
-//		todos.insert(editedTodo, at: indexPath.row)
-//		tableView.reloadData()
-//	}
-//
 //	private func delete(todoAt indexPath: IndexPath) {
 //		todos.remove(at: indexPath.row)
 //		tableView.reloadData()
@@ -93,12 +83,12 @@ extension TodosViewController: UITableViewDataSource {
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return todos.count
+		return store.state.todos.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueCell(withStyle: .subtitle, usingIdentifier: cellReuseIdentifier)
-		return TodoCellFactory.fill(cell: cell, withTodo: todos[indexPath.row])
+		return TodoCellFactory.fill(cell: cell, withTodo: store.state.todos[indexPath.row])
 	}
 
 }
@@ -125,33 +115,6 @@ extension TodosViewController: UITableViewDataSource {
 //											completion(true)
 //		})
 //		return UISwipeActionsConfiguration(actions: [action])
-//	}
-//
-//}
-
-// MARK: - Navigation
-//extension TodosViewController {
-//
-//	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//		guard
-//			let navigationController = segue.destination as? UINavigationController,
-//			let newTodoViewController = navigationController.viewControllers.first as? NewTodoViewController else {
-//				return
-//		}
-//		newTodoViewController.delegate = self
-//	}
-//
-//}
-
-// MARK: - New Todo
-//extension TodosViewController: NewTodoDelegate {
-//
-//	func didCancelNewTodo() {
-//	}
-//
-//	func didAddNew(todo: Todo) {
-//		todos.append(todo)
-//		tableView.reloadData()
 //	}
 //
 //}
