@@ -27,6 +27,7 @@
 		40C5C91F22875005008002EF /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C91E22875005008002EF /* Dispatcher.swift */; };
 		40C5C92322876680008002EF /* TodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C92222876680008002EF /* TodoAction.swift */; };
 		40C5C92B22878352008002EF /* NewTodoReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C92A22878352008002EF /* NewTodoReducers.swift */; };
+		40CF6E42228A05A1000749CF /* TodosReducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CF6E41228A05A1000749CF /* TodosReducers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		40C5C91E22875005008002EF /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		40C5C92222876680008002EF /* TodoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAction.swift; sourceTree = "<group>"; };
 		40C5C92A22878352008002EF /* NewTodoReducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoReducers.swift; sourceTree = "<group>"; };
+		40CF6E41228A05A1000749CF /* TodosReducers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosReducers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		406B00C5228603FF00B93924 /* TodosList */ = {
 			isa = PBXGroup;
 			children = (
+				40CF6E41228A05A1000749CF /* TodosReducers.swift */,
 				406B00C62286042F00B93924 /* TodosViewController.swift */,
 				406B00D5228614C800B93924 /* TodoCellFactory.swift */,
 			);
@@ -352,6 +355,7 @@
 				40A0EBF722885D7700580E85 /* RoutingReducers.swift in Sources */,
 				406B00D122860D1000B93924 /* NewTodoDelegate.swift in Sources */,
 				406B00CF22860CE200B93924 /* NewTodoViewController.swift in Sources */,
+				40CF6E42228A05A1000749CF /* TodosReducers.swift in Sources */,
 				40A0EBF922885F2300580E85 /* Routes.swift in Sources */,
 				40A0EBF522885A1D00580E85 /* TodoRouter.swift in Sources */,
 				40C5C92322876680008002EF /* TodoAction.swift in Sources */,

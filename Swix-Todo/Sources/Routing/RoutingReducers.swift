@@ -8,10 +8,12 @@
 
 import Foundation
 
-func changeRoute(_ state: TodoState, _ action: TodoAction) -> TodoState {
+func routingReducer(_ state: TodoState, _ action: TodoAction) -> TodoState {
 	switch action {
 	case .changeRoute(let route):
-		return TodoState(todos: state.todos, currentRoute: route)
+		return TodoState(todos: state.todos,
+						 newTodo: state.newTodo,
+						 currentRoute: route)
 	default:
 		return state
 	}

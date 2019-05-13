@@ -16,8 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var store: Store<TodoState, TodoAction>!
 	var dispatcher: Dispatcher<TodoState, TodoAction>!
 	let reducers = [
-		addTodo,
-		changeRoute
+		newTodoReducer,
+		todosReducer,
+		routingReducer
 	]
 
 	var router: Router?

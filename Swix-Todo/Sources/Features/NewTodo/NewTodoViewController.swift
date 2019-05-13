@@ -39,6 +39,9 @@ extension NewTodoViewController {
 
 		store.subscribe(onStateChange)
 
+		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
+														   target: self,
+														   action: #selector(cancel))
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
 															target: self,
 															action: #selector(save))
@@ -73,6 +76,9 @@ extension NewTodoViewController {
 		descriptionField.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor, constant: -16).isActive = true
 		descriptionField.topAnchor.constraint(equalTo: titleField.layoutMarginsGuide.bottomAnchor, constant: 16).isActive = true
 		descriptionField.heightAnchor.constraint(equalToConstant: 32).isActive = true
+
+		titleField.addTarget(self, action: #selector(titleFieldDidChange), for: UIControl.Event.editingChanged)
+		descriptionField.addTarget(self, action: #selector(descriptionFieldDidChange), for: UIControl.Event.editingChanged)
 	}
 
 }
@@ -86,17 +92,29 @@ extension NewTodoViewController {
 // MARK: - Actions
 extension NewTodoViewController {
 
-	func cancel(_ sender: UIBarButtonItem) {
-		//		delegate?.didCancelNewTodo()
-		//		dismiss(animated: true)
+	@objc func cancel(_ sender: UIBarButtonItem) {
+		dispatcher.dispatch(action: .cancelAddTodo)
+		dispatcher.dispatch(action: .changeRoute(.todosList))
 	}
 
 	@objc func save(_ sender: UIBarButtonItem) {
-		if let title = titleField.text, let description = descriptionField.text {
-			let newTodo = Todo(title: title, description: description, completed: false)
-			dispatcher.dispatch(action: .addTodo(newTodo))
-		}
+		dispatcher.dispatch(action: .addTodo(store.state.newTodo))
 		dispatcher.dispatch(action: .changeRoute(.todosList))
+	}
+
+}
+
+// MARK: - TextField
+extension NewTodoViewController {
+
+	@objc func titleFieldDidChange(textField: UITextField) {
+		guard let text = textField.text else { return }
+		dispatcher.dispatch(action: .editNewTitle(text))
+	}
+
+	@objc func descriptionFieldDidChange(textField: UITextField) {
+		guard let text = textField.text else { return }
+		dispatcher.dispatch(action: .editNewDescription(text))
 	}
 
 }

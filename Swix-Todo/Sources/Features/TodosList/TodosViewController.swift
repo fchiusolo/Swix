@@ -47,6 +47,7 @@ extension TodosViewController {
 															action: #selector(addTodo))
 		tableView = UITableView(frame: view.bounds, style: .plain)
 		tableView.dataSource = self
+		tableView.delegate = self
 		view.addSubview(tableView)
 	}
 
@@ -68,10 +69,15 @@ extension TodosViewController {
 		dispatcher.dispatch(action: .changeRoute(.newTodo))
 	}
 
-//	private func delete(todoAt indexPath: IndexPath) {
-//		todos.remove(at: indexPath.row)
-//		tableView.reloadData()
-//	}
+	private func delete(todoAt indexPath: IndexPath) {
+		let todo = store.state.todos[indexPath.row]
+		dispatcher.dispatch(action: .deleteTodo(todo))
+	}
+
+	private func complete(todoAt indexPath: IndexPath) {
+		let todo = store.state.todos[indexPath.row]
+		dispatcher.dispatch(action: .completeTodo(todo))
+	}
 
 }
 
@@ -94,27 +100,27 @@ extension TodosViewController: UITableViewDataSource {
 }
 
 // MARK: - Table View
-//extension TodosViewController {
-//
-//	override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//		let action = UIContextualAction(style: .normal,
-//										title: todos[indexPath.row].completed ? "Not Done" : "Done",
-//										handler: { _, _, completion in
-//											self.complete(todoAt: indexPath)
-//											completion(true)
-//		})
-//		action.backgroundColor = .green
-//		return UISwipeActionsConfiguration(actions: [action])
-//	}
-//
-//	override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-//		let action = UIContextualAction(style: .destructive,
-//										title: "Delete",
-//										handler: { _, _, completion in
-//											self.delete(todoAt: indexPath)
-//											completion(true)
-//		})
-//		return UISwipeActionsConfiguration(actions: [action])
-//	}
-//
-//}
+extension TodosViewController: UITableViewDelegate {
+
+	func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let action = UIContextualAction(style: .normal,
+										title: store.state.todos[indexPath.row].completed ? "Not Done" : "Done",
+										handler: { _, _, completion in
+											self.complete(todoAt: indexPath)
+											completion(true)
+		})
+		action.backgroundColor = .green
+		return UISwipeActionsConfiguration(actions: [action])
+	}
+
+	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let action = UIContextualAction(style: .destructive,
+										title: "Delete",
+										handler: { _, _, completion in
+											self.delete(todoAt: indexPath)
+											completion(true)
+		})
+		return UISwipeActionsConfiguration(actions: [action])
+	}
+
+}
