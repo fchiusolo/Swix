@@ -39,7 +39,7 @@ extension NewTodoViewController {
 
 		store.subscribe(onStateChange)
 
-		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
+		navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
 														   target: self,
 														   action: #selector(cancel))
 		navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save,
