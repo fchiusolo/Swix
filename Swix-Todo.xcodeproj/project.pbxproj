@@ -20,9 +20,9 @@
 		40A0EBF522885A1D00580E85 /* TodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0EBF422885A1D00580E85 /* TodoRouter.swift */; };
 		40A0EBF722885D7700580E85 /* RoutingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0EBF622885D7700580E85 /* RoutingReducer.swift */; };
 		40A0EBF922885F2300580E85 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0EBF822885F2300580E85 /* Routes.swift */; };
-		40C5C91922874D8C008002EF /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C91822874D8C008002EF /* Store.swift */; };
+		40C2B465228B578500C6853A /* Swix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C2B464228B578500C6853A /* Swix.framework */; };
+		40C2B466228B578500C6853A /* Swix.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40C2B464228B578500C6853A /* Swix.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		40C5C91B22874F45008002EF /* TodoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C91A22874F45008002EF /* TodoState.swift */; };
-		40C5C91F22875005008002EF /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C91E22875005008002EF /* Dispatcher.swift */; };
 		40C5C92322876680008002EF /* TodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C92222876680008002EF /* TodoAction.swift */; };
 		40C5C92B22878352008002EF /* NewTodoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C92A22878352008002EF /* NewTodoReducer.swift */; };
 		40CF6E42228A05A1000749CF /* TodosReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CF6E41228A05A1000749CF /* TodosReducer.swift */; };
@@ -37,6 +37,20 @@
 			remoteInfo = "Swix-Todo";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		40C2B467228B578600C6853A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				40C2B466228B578500C6853A /* Swix.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		406B009F2286021400B93924 /* Swix-Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swix-Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,9 +70,8 @@
 		40A0EBF422885A1D00580E85 /* TodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRouter.swift; sourceTree = "<group>"; };
 		40A0EBF622885D7700580E85 /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
 		40A0EBF822885F2300580E85 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
-		40C5C91822874D8C008002EF /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		40C2B464228B578500C6853A /* Swix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Swix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C5C91A22874F45008002EF /* TodoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoState.swift; sourceTree = "<group>"; };
-		40C5C91E22875005008002EF /* Dispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		40C5C92222876680008002EF /* TodoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAction.swift; sourceTree = "<group>"; };
 		40C5C92A22878352008002EF /* NewTodoReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoReducer.swift; sourceTree = "<group>"; };
 		40CF6E41228A05A1000749CF /* TodosReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosReducer.swift; sourceTree = "<group>"; };
@@ -69,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40C2B465228B578500C6853A /* Swix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +99,7 @@
 		406B00962286021400B93924 = {
 			isa = PBXGroup;
 			children = (
+				40C2B464228B578500C6853A /* Swix.framework */,
 				406B00A12286021400B93924 /* Swix-Todo */,
 				406B00B62286021500B93924 /* Swix-TodoTests */,
 				406B00A02286021400B93924 /* Products */,
@@ -136,7 +151,6 @@
 				406B00D222860D5E00B93924 /* Models */,
 				40A0EBF12288592B00580E85 /* Routing */,
 				40C5C9202287665E008002EF /* State */,
-				40889AD122862C9C0078C903 /* Swix */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -203,15 +217,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		40889AD122862C9C0078C903 /* Swix */ = {
-			isa = PBXGroup;
-			children = (
-				40C5C91822874D8C008002EF /* Store.swift */,
-				40C5C91E22875005008002EF /* Dispatcher.swift */,
-			);
-			path = Swix;
-			sourceTree = "<group>";
-		};
 		40A0EBF12288592B00580E85 /* Routing */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +254,7 @@
 				406B009B2286021400B93924 /* Sources */,
 				406B009C2286021400B93924 /* Frameworks */,
 				406B009D2286021400B93924 /* Resources */,
+				40C2B467228B578600C6853A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,14 +350,12 @@
 				406B00D422860D6800B93924 /* Todo.swift in Sources */,
 				406B00D6228614C800B93924 /* TodoCellFactory.swift in Sources */,
 				40C5C92B22878352008002EF /* NewTodoReducer.swift in Sources */,
-				40C5C91922874D8C008002EF /* Store.swift in Sources */,
 				40A0EBF722885D7700580E85 /* RoutingReducer.swift in Sources */,
 				406B00CF22860CE200B93924 /* NewTodoViewController.swift in Sources */,
 				40CF6E42228A05A1000749CF /* TodosReducer.swift in Sources */,
 				40A0EBF922885F2300580E85 /* Routes.swift in Sources */,
 				40A0EBF522885A1D00580E85 /* TodoRouter.swift in Sources */,
 				40C5C92322876680008002EF /* TodoAction.swift in Sources */,
-				40C5C91F22875005008002EF /* Dispatcher.swift in Sources */,
 				406B00A32286021400B93924 /* AppDelegate.swift in Sources */,
 				406B00C72286042F00B93924 /* TodosViewController.swift in Sources */,
 				40A0EBF32288594200580E85 /* Router.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swix
 
 private let cellReuseIdentifier = "todo_cell_reuse_identifier"
 private let segueToNewTodoIdentifier = "newTodoSegue"

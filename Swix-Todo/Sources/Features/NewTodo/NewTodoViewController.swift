@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swix
 
 class NewTodoViewController: UIViewController {
 	var titleField: UITextField!

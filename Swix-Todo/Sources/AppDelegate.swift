@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swix
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
