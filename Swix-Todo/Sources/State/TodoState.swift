@@ -10,7 +10,7 @@ struct TodoState {
 
 extension TodoState {
 	
-	static func initial() -> TodoState {
+	static var initial: TodoState {
 		return TodoState(todos: [], newTodo: Todo.initial, currentRoute: .todosList)
 	}
 	

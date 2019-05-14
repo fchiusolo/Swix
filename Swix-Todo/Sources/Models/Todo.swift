@@ -7,7 +7,9 @@ struct Todo {
 }
 
 extension Todo {
+
 	static var initial: Todo {
 		return Todo(title: "", description: "", completed: false)
 	}
+
 }
