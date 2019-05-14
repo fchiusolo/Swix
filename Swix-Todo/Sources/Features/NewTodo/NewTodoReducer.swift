@@ -1,19 +1,10 @@
-//
-//  TodoReducers.swift
-//  Swix-Todo
-//
-//  Created by Francesco Chiusolo on 12/05/2019.
-//  Copyright © 2019 Francesco Chiusolo. All rights reserved.
-//
-
 import Foundation
 
 func newTodoReducer(_ state: TodoState, _ action: TodoAction) -> TodoState {
 	switch action {
 	case .addTodo(let newTodo):
-		let newTodos = concat(todos: state.todos, with: newTodo)
-		return TodoState(todos: newTodos,
-						 newTodo: Todo(title: "", description: "", completed: false),
+		return TodoState(todos: state.todos + newTodo,
+						 newTodo: Todo.initial,
 						 currentRoute: state.currentRoute)
 	case .editNewTitle(let title):
 		return TodoState(todos: state.todos,
@@ -30,13 +21,4 @@ func newTodoReducer(_ state: TodoState, _ action: TodoAction) -> TodoState {
 	default:
 		return state
 	}
-}
-
-private func concat(todos: [Todo], with todo: Todo) -> [Todo] {
-	var newTodos = [Todo]()
-	for todo in todos {
-		newTodos.append(todo)
-	}
-	newTodos.append(todo)
-	return newTodos
 }

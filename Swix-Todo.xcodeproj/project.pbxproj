@@ -15,13 +15,14 @@
 		406B00C92286090100B93924 /* CellDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00C82286090100B93924 /* CellDequeue.swift */; };
 		406B00CF22860CE200B93924 /* NewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00CE22860CE200B93924 /* NewTodoViewController.swift */; };
 		406B00D422860D6800B93924 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00D322860D6800B93924 /* Todo.swift */; };
-		406B00D6228614C800B93924 /* TodoCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406B00D5228614C800B93924 /* TodoCellFactory.swift */; };
 		40A0EBF32288594200580E85 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0EBF22288594200580E85 /* Router.swift */; };
 		40A0EBF522885A1D00580E85 /* TodoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0EBF422885A1D00580E85 /* TodoRouter.swift */; };
 		40A0EBF722885D7700580E85 /* RoutingReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0EBF622885D7700580E85 /* RoutingReducer.swift */; };
 		40A0EBF922885F2300580E85 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A0EBF822885F2300580E85 /* Routes.swift */; };
 		40C2B465228B578500C6853A /* Swix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C2B464228B578500C6853A /* Swix.framework */; };
 		40C2B466228B578500C6853A /* Swix.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 40C2B464228B578500C6853A /* Swix.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		40C2B46C228B5BEE00C6853A /* Sum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C2B46B228B5BEE00C6853A /* Sum.swift */; };
+		40C2B46F228B5CFF00C6853A /* TodoFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C2B46E228B5CFF00C6853A /* TodoFill.swift */; };
 		40C5C91B22874F45008002EF /* TodoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C91A22874F45008002EF /* TodoState.swift */; };
 		40C5C92322876680008002EF /* TodoAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C92222876680008002EF /* TodoAction.swift */; };
 		40C5C92B22878352008002EF /* NewTodoReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C5C92A22878352008002EF /* NewTodoReducer.swift */; };
@@ -65,12 +66,13 @@
 		406B00C82286090100B93924 /* CellDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDequeue.swift; sourceTree = "<group>"; };
 		406B00CE22860CE200B93924 /* NewTodoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoViewController.swift; sourceTree = "<group>"; };
 		406B00D322860D6800B93924 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
-		406B00D5228614C800B93924 /* TodoCellFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoCellFactory.swift; sourceTree = "<group>"; };
 		40A0EBF22288594200580E85 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		40A0EBF422885A1D00580E85 /* TodoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoRouter.swift; sourceTree = "<group>"; };
 		40A0EBF622885D7700580E85 /* RoutingReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingReducer.swift; sourceTree = "<group>"; };
 		40A0EBF822885F2300580E85 /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		40C2B464228B578500C6853A /* Swix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Swix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40C2B46B228B5BEE00C6853A /* Sum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sum.swift; sourceTree = "<group>"; };
+		40C2B46E228B5CFF00C6853A /* TodoFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoFill.swift; sourceTree = "<group>"; };
 		40C5C91A22874F45008002EF /* TodoState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoState.swift; sourceTree = "<group>"; };
 		40C5C92222876680008002EF /* TodoAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAction.swift; sourceTree = "<group>"; };
 		40C5C92A22878352008002EF /* NewTodoReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTodoReducer.swift; sourceTree = "<group>"; };
@@ -170,7 +172,6 @@
 			children = (
 				40CF6E41228A05A1000749CF /* TodosReducer.swift */,
 				406B00C62286042F00B93924 /* TodosViewController.swift */,
-				406B00D5228614C800B93924 /* TodoCellFactory.swift */,
 			);
 			path = TodosList;
 			sourceTree = "<group>";
@@ -186,7 +187,9 @@
 		406B00CB22860BA000B93924 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				40C2B46A228B5BD500C6853A /* Array */,
 				406B00CA22860B8D00B93924 /* UITableView */,
+				40C2B46D228B5CD900C6853A /* UITableViewCell */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,6 +229,22 @@
 				40A0EBF822885F2300580E85 /* Routes.swift */,
 			);
 			path = Routing;
+			sourceTree = "<group>";
+		};
+		40C2B46A228B5BD500C6853A /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				40C2B46B228B5BEE00C6853A /* Sum.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
+		40C2B46D228B5CD900C6853A /* UITableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				40C2B46E228B5CFF00C6853A /* TodoFill.swift */,
+			);
+			path = UITableViewCell;
 			sourceTree = "<group>";
 		};
 		40C5C9202287665E008002EF /* State */ = {
@@ -348,8 +367,9 @@
 				406B00C92286090100B93924 /* CellDequeue.swift in Sources */,
 				40C5C91B22874F45008002EF /* TodoState.swift in Sources */,
 				406B00D422860D6800B93924 /* Todo.swift in Sources */,
-				406B00D6228614C800B93924 /* TodoCellFactory.swift in Sources */,
 				40C5C92B22878352008002EF /* NewTodoReducer.swift in Sources */,
+				40C2B46C228B5BEE00C6853A /* Sum.swift in Sources */,
+				40C2B46F228B5CFF00C6853A /* TodoFill.swift in Sources */,
 				40A0EBF722885D7700580E85 /* RoutingReducer.swift in Sources */,
 				406B00CF22860CE200B93924 /* NewTodoViewController.swift in Sources */,
 				40CF6E42228A05A1000749CF /* TodosReducer.swift in Sources */,

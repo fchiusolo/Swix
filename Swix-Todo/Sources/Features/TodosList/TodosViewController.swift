@@ -1,16 +1,7 @@
-//
-//  TodosViewController.swift
-//  Swix-Todo
-//
-//  Created by Francesco Chiusolo on 10/05/2019.
-//  Copyright © 2019 Francesco Chiusolo. All rights reserved.
-//
-
 import UIKit
 import Swix
 
 private let cellReuseIdentifier = "todo_cell_reuse_identifier"
-private let segueToNewTodoIdentifier = "newTodoSegue"
 
 class TodosViewController: UIViewController {
 
@@ -95,7 +86,7 @@ extension TodosViewController: UITableViewDataSource {
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueCell(withStyle: .subtitle, usingIdentifier: cellReuseIdentifier)
-		return TodoCellFactory.fill(cell: cell, withTodo: store.state.todos[indexPath.row])
+		return cell.fill(with: store.state.todos[indexPath.row])
 	}
 
 }
