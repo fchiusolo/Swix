@@ -7,30 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40C2B44E228B56F200C6853A /* Swix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C2B444228B56F200C6853A /* Swix.framework */; };
-		40C2B453228B56F200C6853A /* SwixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C2B452228B56F200C6853A /* SwixTests.swift */; };
 		40C2B455228B56F200C6853A /* Swix.h in Headers */ = {isa = PBXBuildFile; fileRef = 40C2B447228B56F200C6853A /* Swix.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		40C2B460228B573000C6853A /* Dispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C2B45E228B573000C6853A /* Dispatcher.swift */; };
 		40C2B461228B573000C6853A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C2B45F228B573000C6853A /* Store.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		40C2B44F228B56F200C6853A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 40C2B43B228B56F200C6853A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40C2B443228B56F200C6853A;
-			remoteInfo = Swix;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		40C2B444228B56F200C6853A /* Swix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Swix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40C2B447228B56F200C6853A /* Swix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Swix.h; sourceTree = "<group>"; };
 		40C2B448228B56F200C6853A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40C2B44D228B56F200C6853A /* SwixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		40C2B452228B56F200C6853A /* SwixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwixTests.swift; sourceTree = "<group>"; };
-		40C2B454228B56F200C6853A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40C2B45E228B573000C6853A /* Dispatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatcher.swift; sourceTree = "<group>"; };
 		40C2B45F228B573000C6853A /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,14 +28,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		40C2B44A228B56F200C6853A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				40C2B44E228B56F200C6853A /* Swix.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,7 +35,6 @@
 			isa = PBXGroup;
 			children = (
 				40C2B446228B56F200C6853A /* Swix */,
-				40C2B451228B56F200C6853A /* SwixTests */,
 				40C2B445228B56F200C6853A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,7 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				40C2B444228B56F200C6853A /* Swix.framework */,
-				40C2B44D228B56F200C6853A /* SwixTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,15 +55,6 @@
 				40C2B462228B574600C6853A /* Sources */,
 			);
 			path = Swix;
-			sourceTree = "<group>";
-		};
-		40C2B451228B56F200C6853A /* SwixTests */ = {
-			isa = PBXGroup;
-			children = (
-				40C2B452228B56F200C6853A /* SwixTests.swift */,
-				40C2B454228B56F200C6853A /* Info.plist */,
-			);
-			path = SwixTests;
 			sourceTree = "<group>";
 		};
 		40C2B462228B574600C6853A /* Sources */ = {
@@ -140,24 +106,6 @@
 			productReference = 40C2B444228B56F200C6853A /* Swix.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		40C2B44C228B56F200C6853A /* SwixTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 40C2B45B228B56F200C6853A /* Build configuration list for PBXNativeTarget "SwixTests" */;
-			buildPhases = (
-				40C2B449228B56F200C6853A /* Sources */,
-				40C2B44A228B56F200C6853A /* Frameworks */,
-				40C2B44B228B56F200C6853A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				40C2B450228B56F200C6853A /* PBXTargetDependency */,
-			);
-			name = SwixTests;
-			productName = SwixTests;
-			productReference = 40C2B44D228B56F200C6853A /* SwixTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -171,9 +119,6 @@
 					40C2B443228B56F200C6853A = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
-					};
-					40C2B44C228B56F200C6853A = {
-						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
 			};
@@ -190,20 +135,12 @@
 			projectRoot = "";
 			targets = (
 				40C2B443228B56F200C6853A /* Swix */,
-				40C2B44C228B56F200C6853A /* SwixTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		40C2B442228B56F200C6853A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		40C2B44B228B56F200C6853A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,23 +159,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		40C2B449228B56F200C6853A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				40C2B453228B56F200C6853A /* SwixTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		40C2B450228B56F200C6853A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 40C2B443228B56F200C6853A /* Swix */;
-			targetProxy = 40C2B44F228B56F200C6853A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		40C2B456228B56F200C6853A /* Debug */ = {
@@ -416,44 +337,6 @@
 			};
 			name = Release;
 		};
-		40C2B45C228B56F200C6853A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4MPX898GZF;
-				INFOPLIST_FILE = SwixTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.francescochiusolo.SwixTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		40C2B45D228B56F200C6853A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4MPX898GZF;
-				INFOPLIST_FILE = SwixTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.francescochiusolo.SwixTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -471,15 +354,6 @@
 			buildConfigurations = (
 				40C2B459228B56F200C6853A /* Debug */,
 				40C2B45A228B56F200C6853A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		40C2B45B228B56F200C6853A /* Build configuration list for PBXNativeTarget "SwixTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				40C2B45C228B56F200C6853A /* Debug */,
-				40C2B45D228B56F200C6853A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

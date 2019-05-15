@@ -5,6 +5,6 @@
       location = "group:Swix/Swix.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Swix-Todo.xcodeproj">
+      location = "group:Swix-Todo/Swix-Todo.xcodeproj">
    </FileRef>
 </Workspace>
