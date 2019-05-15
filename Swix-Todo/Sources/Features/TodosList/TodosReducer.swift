@@ -9,11 +9,12 @@ func todosReducer(_ state: TodoState, _ action: TodoAction) -> TodoState {
 		let oldTodo = state.todos[index]
 		var newTodos = state.todos
 		newTodos.remove(at: index)
-		newTodos.insert(Todo(title: oldTodo.title, description: oldTodo.title.description, completed: true),
+		newTodos.insert(Todo(title: oldTodo.title, description: oldTodo.description, completed: true),
 						at: index)
 		return TodoState(todos: newTodos,
 						 newTodo: state.newTodo,
-						 currentRoute: state.currentRoute)
+						 currentRoute: state.currentRoute,
+						 lastRoute: state.lastRoute)
 	case .deleteTodo(let todo):
 		guard let index = state.todos.firstIndex(where: { $0.title == todo.title }) else {
 			return state
@@ -22,7 +23,8 @@ func todosReducer(_ state: TodoState, _ action: TodoAction) -> TodoState {
 		newTodos.remove(at: index)
 		return TodoState(todos: newTodos,
 						 newTodo: state.newTodo,
-						 currentRoute: state.currentRoute)
+						 currentRoute: state.currentRoute,
+						 lastRoute: state.lastRoute)
 	default:
 		return state
 	}

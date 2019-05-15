@@ -8,15 +8,12 @@ class TodoRouter: Router {
 	let store: Store<TodoState, TodoAction>
 	let dispatcher: Dispatcher<TodoState, TodoAction>
 
-	var lastRoute: Route
-
 	init(navigationController: UINavigationController,
 		 store: Store<TodoState, TodoAction>,
 		 dispatcher: Dispatcher<TodoState, TodoAction>) {
 		self.navigationController = navigationController
 		self.store = store
 		self.dispatcher = dispatcher
-		self.lastRoute = store.state.currentRoute
 	}
 
 	func start() {
@@ -46,12 +43,10 @@ class TodoRouter: Router {
 
 extension TodoRouter {
 	func onStateChange(_ state: TodoState) {
-		switch (lastRoute, state.currentRoute) {
+		switch (state.lastRoute, state.currentRoute) {
 		case (.newTodo, .todosList):
-			lastRoute = .todosList
 			dismissNewTodo()
 		case (.todosList, .newTodo):
-			lastRoute = .newTodo
 			presentNewTodo()
 		default:
 			return

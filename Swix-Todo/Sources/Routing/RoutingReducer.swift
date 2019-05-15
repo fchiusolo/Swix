@@ -5,7 +5,8 @@ func routingReducer(_ state: TodoState, _ action: TodoAction) -> TodoState {
 	case .changeRoute(let route):
 		return TodoState(todos: state.todos,
 						 newTodo: state.newTodo,
-						 currentRoute: route)
+						 currentRoute: route,
+						 lastRoute: state.currentRoute)
 	default:
 		return state
 	}
